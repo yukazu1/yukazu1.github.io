@@ -1,1 +1,354 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+
+<style id="webmakerstyle">
+header {
+  width: 100vw;
+  height: 30px;
+  background: #00cc00;
+  color: white;
+  padding: 20px;
+  user-select: none;
+  font-size: 20px;
+}
+body {
+  background: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ,
+    Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.2em;
+  margin-bottom: 0;
+  overflow-x: hidden;
+}
+
+main {
+  margin-top: 10px;
+  margin-left: 15vw;
+  border-radius: 20px;
+  padding: 20px;
+  background: #ffffff;
+  width: 60vw;
+  margin-bottom: 60px;
+}
+
+.start {
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: #333333;
+  color: white;
+  margin: 0;
+  padding: 10px;
+  
+}
+
+.modal_bg {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: #000000aa;
+  position: absolute;
+  top: 0;
+    display:none;
+}
+
+#modal {
+  background: white;
+  z-index: 3;
+  padding: 20px;
+  border-radius: 20px;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 100px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  transform: translate(-50%, -50%);
+  height:300px;
+  width:250px;
+  display:none;
+}
+h2 {
+  margin: 0;
+  margin-bottom: 30px;
+  text-align:center;
+}
+
+p.error {
+  color: red;
+  visibility: hidden;
+}
+.next{
+  text-align:right;
+}
+.next>button{
+  background:#00bb00;
+  padding:7px 25px;
+  border:none;
+  border-radius:10px;
+  color:white;
+  font-size:1rem;
+  user-select:none;
+}
+
+
+
+.start{
+  text-align:center;
+}
+.start>button{
+  background:#00bb00;
+  padding:7px 25px;
+  border:none;
+  border-radius:10px;
+  color:white;
+  font-size:1rem;
+  user-select:none;
+}
+
+
+
+
+
+.mod_2> button{
+  width:40%;
+  margin-left:2.5%;
+  margin-right:2.5%;
+  margin-top:20px;
+  
+  background:#00bb00;
+  padding:30px 25px;
+  border:none;
+  border-radius:10px;
+  color:white;
+  font-size:1rem; 
+  user-select:none;
+}
+
+button:active{
+  background:#007700;
+}
+
+
+
+
+.set_group {
+  margin-bottom: 5px;
+  padding-top: 12px;
+  position: relative;
+}
+
+.set_select {
+  padding: 2px;
+  padding-top: 12px;
+  border: none;
+  border: 2px solid #000;
+  font-size: 16px;
+  line-height: 20px;
+  background: white;
+  height: 45px;
+  outline: none;
+  width: 100%;
+  margin-right: 1vw;
+
+  border-radius: 3px;
+}
+.set_label_select {
+  position: absolute;
+  top: 16px;
+  left: 5px;
+  color: gray;
+  transition: all 0.2s;
+  cursor: text;
+  font-size: 12px;
+  line-height: 12px;
+  user-select: none;
+}
+
+.set_select:focus {
+  border: 2px solid #00bb00;
+}
+
+.set_select:focus + label {
+  line-height: 12px;
+  top: 16px;
+  color: #00bb00;
+}
+
+
+
+
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+position:absolute;
+     top: 0%;
+   left: 44%;
+   transform: translateX(-50%);
+}
+.loader {
+  user-select:none;
+  position: relative;
+  border-top: 4px solid #00cc0033;
+  border-right: 4px solid #00aa0033;
+  border-bottom: 4px solid #00ac0033;
+  border-left: 4px solid #00cc00;
+  animation: load8 1s infinite linear;
+}
+
+@keyframes load8 {
+  0% {
+
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+</style>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,% initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>英語学習ならエイタンGO</title>
+  </head>
+  <body>
+    <div class="modal">
+      <div class="modal_bg"></div>
+      <div id="modal">
+        <h2>学習を始める</h2>
+        
+       <div class="mod_1">
+          <p>何単語学習しますか。</p>
+        <div class="set_group">
+          <select class="set_select">
+            <option disabled selected></option>
+            <option>100</option>
+            <option>200</option>
+            <option>300</option>
+            <option>400</option>
+            <option>500</option>
+            <option>600</option>
+            <option>700</option>
+            <option>800</option>
+            <option>900</option>
+            <option>1000</option>
+          </select>
+          <label class="set_label_select">単語数を選ぶ</label>
+          <p class="error">単語数を選んでください。</p>
+          <div class="next" id="next"><button>次へ</button></div>
+        </div>
+        </div>
+        <div class="mod_2">
+          <p>回答方式を選んでください。</p>
+          <button value="sel">選択式</button>
+          <button value="des">記述式</button>
+        </div>
+        <div class="loader"></div>
+      </div>
+    </div>
+    <header>エイタンGO</header>
+    <main>
+      <h1>英語学習ならエイタンGO</h1>
+      <p>1日15分から始める英単語学習</p>
+      <div class="start">
+        <button>学習を開始<br />Let's study!</button>
+      </div>
+    </main>
+    <footer>© Copyright 2023 えいたん All rights reserved.</footer>
+  </body>
+</html>
+
+
+<script>
+var tng_num;
+var way;
+var json;
+var past_num=[];
+$('.modal_bg').click(function(){
+  $(this).fadeOut(200);
+  $('#modal').fadeOut(200);
+  
+});
+
+$('.start>button').click(function(){
+  $('.loader').show();
+  $('.mod_1').hide();
+  $('.mod_2').hide();
+$('.modal_bg').fadeIn(400);
+$('#modal').fadeIn(400);
+  $('.loader').fadeOut(1100);
+  
+  
+ setTimeout(function(){
+   $('.loader').hide();
+     $('.mod_1').fadeIn(100);
+   
+},800);
+});
+
+$('#next').click(function(){
+
+var tng_num = Number($('select option:selected').text());
+  if(tng_num==0){
+    $(".error").css({"visibility":"visible"});
+  }else{
+    $('.mod_1').hide(); 
+    $('.loader').show();
+    $(".error").css({"visibility":"hideen"});
+    setTimeout(function(){
+   $('.loader').hide();
+     $('.mod_2').fadeIn(100);
+   
+},800);
+  }
+    
+});
+
+$('.mod_2>button').click(function(){
+  way=$(this).val();
+  $('.mod_2').hide(); 
+    $('.loader').show();
+   setTimeout(function(){
+     
+    create();
+},800);
+});
+// create();
+function create(){
+ $('main').html('<div class="loader"></div>');
+$('.modal_bg').click(); 
+ $.getJSON("https://yukazu1.github.io/eitango/tango.json?1")
+    .done(function (data) {
+    var json=data;
+    var r = Math.floor(Math.random() * ((23 + 1) - 1)) + 1;
+   $('main').text(json[r][1]+'を英語で')
+  
+   
+  });
+}
+//# sourceURL=userscript.js
+</script>
+</body>
+</html>
