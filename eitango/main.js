@@ -3,6 +3,10 @@ var way;//回答方法
 var json;//単語配列を記録
 var lang;//回答言語
 var past_num=[];//過去に出た問題を記録
+var host=location.host;
+console.log(host);
+// history.replaceState(null,null,"./")
+
 $('.modal_bg').click(function(){
   $(this).fadeOut(200);
   $('#modal').fadeOut(200);
