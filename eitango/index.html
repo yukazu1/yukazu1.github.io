@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="./main.css">
+    <title>英語学習ならエイタンGO</title>
+  </head>
+  <body>
+    <div class="modal">
+      <div class="modal_bg"></div>
+      <div id="modal">
+        <h2>学習を始める</h2>
+        
+       <div class="mod_1">
+          <p>何単語学習しますか。</p>
+        <div class="set_group">
+          <select class="set_select">
+            <option disabled selected></option>
+            <option>100</option>
+            <option>200</option>
+            <option>300</option>
+            <option>400</option>
+            <option>500</option>
+            <option>600</option>
+            <option>700</option>
+            <option>800</option>
+            <option>900</option>
+            <option>1000</option>
+          </select>
+          <label class="set_label_select">単語数を選ぶ</label>
+          <p class="error">単語数を選んでください。</p>
+          <div class="next" id="next"><button>次へ</button></div>
+        </div>
+        </div>
+        <div class="mod_2">
+          <p>回答方式を選んでください。</p>
+          <div> <button value="sel">選択式</button>
+            <button value="des">記述式</button></div>
+         
+        </div>
+        <div class="mod_3">
+          <p>回答する言語を選んでください。</p>
+          <div> <button value="ja">日本語</button>
+            <button value="en">英語</button></div>
+         
+        </div>
+        <div class="loader"></div>
+      </div>
+    </div>
+    <header> <a href="./">エイタンGO</a></header>
+   
+    <div class="wrapper">
+        <main>
+          <div class="start_menu"> <h1><span>英語学習</span><span>なら</span><span>エイタンGO</span></h1>
+            <p>1日15分から始める英単語学習</p>
+            <div class="start">
+              <button>学習を開始<br />Let's study!</button></div></div>
+           
+              <!-- <ul><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul> -->
+              <div id="quiz">
+                <h3 id="q"></h3>
+                <div id="a">
+                  <button id="b_1"></button>
+                  <button id="b_2"></button>
+                  <button id="b_3"></button>
+                  <button id="b_4"></button>
+                </div>
+
+                
+              </div>  
+          </main>
+    </div>
+    <div id="bar"><div id="bar_now"></div><div class="t_a"><div id="true"></div></div><div id="bar_txt"><div id="true_txt">正解<br><span class="q_num">193問</span><br><span class="q-per">99.9%</span></div><div id="false_txt">不正解<br><span class="q_num">193問</span><br><span class="q-per">99.9%</span></div></div></div>
+    
+    
+    <footer>© Copyright 2023 えいたん All rights reserved.</footer>
+    <script src="./main.js"></script>
+  </body>
+</html>
