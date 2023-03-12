@@ -164,7 +164,7 @@ function result(){
   $('.start_menu').show();
   $('#q_num').text(tng_num);
   $('#t_num').text(true_num);
-  var per=Math.floor( true_num/tng_num * Math.pow( 10, 1 ) ) / Math.pow( 10, 1 ) 
+  var per=Math.floor(( true_num/tng_num*100) * Math.pow( 10, 1 ) ) / Math.pow( 10, 1 ) 
   $('#t_per').text(per);
   $('#result>a').attr('href','https://twitter.com/intent/tweet?text=エイタンGOをやったら%0A正解率が'+per+'%25でした！(正解%3A'+true_num+'問、不正解%3A'+(tng_num-true_num+'問)%0Ayukazu1.github.io%2Feitango%2F%20%23エイタンGO'))
   setTimeout(function(){

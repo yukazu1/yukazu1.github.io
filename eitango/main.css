@@ -194,7 +194,10 @@ header {
       background:#aaaaaa;
     }
 
-  
+  button{
+    -webkit-tap-highlight-color: transparent;
+    /* display:none; */
+  }
   
     button:active{
       background:#007700;
