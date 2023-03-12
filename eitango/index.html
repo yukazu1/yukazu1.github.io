@@ -11,7 +11,11 @@
     <link rel="icon" type="image/png" href="./android-touch-icon.png">
     <meta name="theme-color" content="#00bb00">
     <meta name="description" content="皆さん英語の学習に苦労していませんか？そんな時にこのアプリを使うと、1日15分で英単語を覚えられます。" />
-
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="エイタンGO" />
+    <meta name="twitter:description" content="1日15分から始める英単語学習" />
+    <meta name="twitter:image" content="./apple-touch-icon.png" />
     <title>英語学習ならエイタンGO</title>
   </head>
   <body>
@@ -25,7 +29,7 @@
         <div class="set_group">
           <select class="set_select">
             <option disabled selected></option>
-            <option>100</option>
+            <option>10</option>
             <option>200</option>
             <option>300</option>
             <option>400</option>
@@ -77,6 +81,14 @@
 
                 
               </div>  
+              <div id="result">
+                <h1>結果</h1>
+                <p>あなたは<span id="q_num"></span>問中、<span id="t_num"></span>問正解しました。<br>正解率：<span id="t_per"></span>%</p>
+                <button class="restart">もう一度挑戦する</button>
+                <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><button class="tweet">結果をツイート</button></a>
+                
+
+              </div>
           </main>
     </div>
     <div id="bar"><div id="bar_now"></div><div class="t_a"><div id="true"></div></div><div id="bar_txt"><div id="true_txt">正解<br><span class="q_num">193問</span><br><span class="q-per">99.9%</span></div><div id="false_txt">不正解<br><span class="q_num">193問</span><br><span class="q-per">99.9%</span></div></div></div>

@@ -236,8 +236,46 @@ user-select: none;
   color:blue;
   display:none;
 }
+.restart{
+  width:150px;
+  background: #00bb00;
+  border:none;
+padding-top:10px;
+padding-bottom:10px;
+border-radius: 20px;
+color: white;
+margin-right: 20px;
+}
+.tweet{
+  width:150px;
+  background:#1da1f2;
+  border:none;
+padding-top:10px;
+padding-bottom:10px;
+border-radius: 20px;
+color: white;
+}
+.tweet:active{
+background: #0c7abe;
+}
+.tweet::before{
+  content: '';
+  display: inline-block;
+  width:20px;
+  height:20px;
+  margin-right: 6px;
+  background-image: url(./twitter.svg);
+  background-size: contain;
+  vertical-align: middle;
+}
+#result{
+  display: none;
+}
   *{
     box-sizing: border-box;
+  }
+  button,select{
+    cursor: pointer;
   }
 
   @media screen and (min-width: 600px) {
