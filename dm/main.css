@@ -11,6 +11,7 @@ header{
     background: white;
     display: flex;
     position:fixed;
+    padding-top: 10px;
 }
 
 .icon{
@@ -35,13 +36,15 @@ b{
  margin-right: 20px;
  margin-left: auto;
  display: block;
-    
+   
 }
 
 
 .intro{
     text-align: center;
-    /* border-bottom: ; */
+    margin-top: 63px;
+    padding-bottom: 20px;
+    border-bottom: 0.5px solid rgb(207, 209, 209);
 }
 .intro>img{
 margin-top:5px;
