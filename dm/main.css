@@ -87,8 +87,8 @@ margin-top:5px;
     padding-left:15px;
     width: fit-content;
     border-radius: 20px;
-        padding-top:7px;
-    padding-bottom:7px;
+        padding-top:10px;
+    padding-bottom:10px;
     padding-right:15px;
     letter-spacing:0px;
     max-width:65vw;
@@ -109,6 +109,11 @@ margin-bottom: 20px;
     margin-left:3px;
     letter-spacing:0px;
 }
+.time.m::after{
+    content:'午前';
+    margin-left:3px;
+    letter-spacing:0px;
+}
 .me{
     text-align: right;
     margin-bottom:10px;
@@ -119,9 +124,9 @@ margin-bottom: 20px;
   display: inline-block;
     border-radius: 20px;
     max-width: 65vw;
-        padding-top:7px;
+        padding-top:10px;
         padding-left:15px;
-    padding-bottom:7px;
+    padding-bottom:10px;
     padding-right:15px;
     letter-spacing:0px;
     text-align:left;
