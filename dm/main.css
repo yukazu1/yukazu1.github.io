@@ -21,6 +21,7 @@ width:35px;
 height:35px;
 margin-top:6px;
 margin-right:12px;
+filter: blur(6px); 
 }
 b{
     margin-top:13px;
@@ -51,6 +52,7 @@ b{
 margin-top:5px;
    width:70px;
    border-radius: 50%;
+   filter: blur(6px);
 }
 .name{
     font-size:15px;
@@ -138,20 +140,16 @@ margin-bottom: 20px;
 }
 
 
-.moza1{
-    width: calc(100vw - 19px);
-    margin-right: 10px;
-    position: absolute;
-    top:6200px;
-    height:948px;
-    backdrop-filter: blur(7px);
-    
 
+.moz{
+    filter: blur(6px);  
+    width:100%;
 }
-
   
 
-
+.moza{
+    filter: blur(8px);
+}
 
 body {
     margin: 0;
