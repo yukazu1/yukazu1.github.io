@@ -155,17 +155,18 @@ footer{
     width:100%;
     background: white;
     height:66px;
-}
-.ii{
-    
-    width:100%;
-    height:53px;
-    background-image: url(./fot.png);
-    background-size: contain;
     position: absolute;
     position:fixed;
     bottom:0;
-    margin-bottom: 0;
+}
+.ii{
+    margin-top: 6px;
+    width:100%;
+    height:56px;
+    background-image: url(./fot.png);
+    background-size: contain;
+   
+    bottom:0;
     
 }
 
