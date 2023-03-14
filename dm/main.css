@@ -156,9 +156,8 @@ footer{
     background: white;
 }
 .ii{
+    
     width:100%;
-    height:56px;
-    background-image: url(./fot.png);
     background-size: contain;
     position: absolute;
     position:fixed;
