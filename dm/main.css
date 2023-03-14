@@ -154,10 +154,13 @@ margin-bottom: 20px;
 footer{
     width:100%;
     background: white;
+    height:66px;
 }
 .ii{
     
-    width:100vw;
+    width:100%;
+    height:56px;
+    background-image: url(./fot.png);
     background-size: contain;
     position: absolute;
     position:fixed;
