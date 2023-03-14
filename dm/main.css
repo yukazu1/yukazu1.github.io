@@ -157,7 +157,7 @@ footer{
 }
 .ii{
     
-    width:100%;
+    width:100vw;
     background-size: contain;
     position: absolute;
     position:fixed;
